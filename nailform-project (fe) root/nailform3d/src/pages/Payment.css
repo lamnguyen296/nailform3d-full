@@ -1,0 +1,246 @@
+.payment-page {
+  background-color: #f8f9fc;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.payment-card {
+  display: flex;
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 900px;
+}
+
+.payment-left {
+  flex: 1;
+  background: #111;
+  color: white;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-left h2 {
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.order-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #a78bfa;
+}
+
+.order-item p {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.order-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.order-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.security-badges {
+  margin-top: auto;
+  display: flex;
+  gap: 20px;
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+.security-badges i {
+  margin-right: 5px;
+}
+
+.payment-right {
+  flex: 1;
+  padding: 50px 40px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.payment-right h2 {
+  font-size: 1.8rem;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.qr-instruction {
+  color: #6b7280;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.qr-wrapper {
+  background: #fff;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f3f4f6;
+  margin-bottom: 30px;
+}
+
+.qr-placeholder {
+  width: 200px;
+  height: 200px;
+  border: 2px dashed #d1d5db;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #9ca3af;
+}
+
+.qr-placeholder i {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #d1d5db;
+}
+
+.bank-info {
+  width: 100%;
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.info-row:last-child {
+  margin-bottom: 0;
+}
+
+.info-row span {
+  color: #6b7280;
+}
+
+.info-row strong {
+  color: #111;
+}
+
+.highlight-row {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.highlight-row strong {
+  color: #8b5cf6;
+  background: #ede9fe;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 1rem;
+}
+
+.btn-confirm-payment {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #a78bfa, #818cf8);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3);
+}
+
+.btn-confirm-payment:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 25px rgba(139, 92, 246, 0.4);
+}
+
+.btn-confirm-payment:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.payment-success-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.success-icon {
+  font-size: 5rem;
+  color: #10b981;
+  margin-bottom: 20px;
+}
+
+.payment-success-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.payment-success-container p {
+  color: #6b7280;
+  max-width: 500px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.btn-return {
+  padding: 14px 30px;
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 99px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .payment-card {
+    flex-direction: column;
+  }
+}

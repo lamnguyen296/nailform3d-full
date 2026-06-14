@@ -1,0 +1,103 @@
+.social-page {
+  background-image: url('/backgroundsocial.png');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--primary-text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.social-hero {
+  padding: 20px 40px;
+  margin-top: 20px;
+  max-width: 600px;
+}
+
+.social-hero h1 {
+  font-size: 46px;
+  font-weight: 800;
+  color: #3b1912;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+.social-hero p {
+  font-size: 20px;
+  color: #3b1912;
+  font-weight: 500;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.btn-post-design {
+  background: linear-gradient(90deg, #a770ff, #388bff);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(56,139,255,0.4);
+  display: inline-block;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.3s;
+  position: relative;
+}
+
+.btn-post-design:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(56,139,255,0.5);
+}
+
+.social-grid-wrapper { padding: 20px 40px 60px 40px; }
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.nail-card {
+  background: rgba(255,255,255,0.35);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  border: 1px solid rgba(255,255,255,0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.nail-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.nail-card .card-img { width: 100%; height: 220px; object-fit: cover; }
+
+.card-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card-title { font-size: 16px; font-weight: 700; color: #111; margin-bottom: 5px; }
+.card-info { font-size: 11px; color: #333; font-weight: 500; line-height: 1.4; }
+.card-footer { margin-top: 15px; padding-top: 10px; border-top: 1px solid rgba(0,0,0,0.05); display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: #555; font-weight: 600; }
+.card-timer { color: #333; font-weight: 700; }
+
+.pagination { display: flex; justify-content: center; align-items: center; gap: 15px; margin-top: 40px; margin-bottom: 20px; }
+.page-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(0,0,0,0.15); cursor: pointer; transition: background 0.3s, transform 0.3s; }
+.page-dot.active { background: #444; transform: scale(1.2); }
+.page-nav { background: none; border: none; font-size: 16px; color: #444; cursor: pointer; padding: 5px 10px; transition: color 0.3s; }
+.page-nav:hover { color: #000; }

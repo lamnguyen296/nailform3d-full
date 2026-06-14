@@ -1,0 +1,35 @@
+Dự án: NAILFORM 3D
+Slogan: Design your nails before you wear them
+Lĩnh vực: Beauty-tech / Nền tảng 3D Customization kết hợp Creator Economy
+
+I. TỔNG QUAN
+Nailform 3D là nền tảng web cho phép khách hàng tự thiết kế móng tay 3D theo ý tưởng cá nhân, xem trước kết quả trên tay thật để tránh rủi ro (sai màu, sai form, sai charm) trước khi ra tiệm. 
+Nền tảng này kết nối khách hàng với các tiệm nail (Salon) và thợ nail (Technician).
+
+II. BẢNG GIÁ (PRICING) - Rất quan trọng:
+Hệ thống KHÔNG THU PHÍ HOA HỒNG (No commission) trên mỗi lượt đặt lịch. Thay vào đó, nền tảng thu phí đăng ký (Subscription).
+1. Khách hàng cá nhân (B2C):
+- Gói FREE: Miễn phí, tùy chỉnh cơ bản.
+- Gói PRO: 299.000 VNĐ/năm (cho phép dùng charm cao cấp, xuất video 360, lưu 3 thiết kế/tháng).
+- Gói PREMIUM: 499.000 VNĐ/năm (lưu không giới hạn, tính năng chuyên gia).
+
+2. Tiệm Nail & Thợ Nail (B2B):
+- Gói STUDIO 5 User: 1.790.000 VNĐ/năm (cho tiệm nhỏ).
+- Gói STUDIO 10 User: 2.990.000 VNĐ/năm (cho tiệm vừa).
+- Gói ACADEMY 20 User: 4.990.000 VNĐ/năm (cho học viện/tiệm lớn).
+
+III. TÍNH NĂNG CHÍNH VÀ GIÁ TRỊ CỐT LÕI (USPs)
+- Core Value: Xem trước móng tay 3D chuẩn xác, giảm thiểu sai lệch kỳ vọng (expectation mismatch).
+- Khách hàng: Booking trực tiếp trên nền tảng, lựa chọn tiệm/thợ theo style, giá cả, và đánh giá.
+- Tiệm/Thợ Nail: Nhận file thiết kế chuẩn từ khách, báo giá nhanh, tránh cãi vã, xây dựng profile chuyên nghiệp.
+- Payment: Thanh toán qua hệ thống Escrow (giữ tiền để đảm bảo an toàn).
+
+IV. LUỒNG ĐẶT LỊCH (BOOKING FLOW)
+1. Khách thiết kế móng trên tay 3D (chọn màu da, form, charm).
+2. Hệ thống xuất file chuẩn (không hiện giá cố định vì mỗi tiệm sẽ báo giá khác nhau).
+3. Khách gửi yêu cầu (Request) cho tiệm/thợ hoặc đăng công khai.
+4. Tiệm nail nhận file, báo giá và chốt lịch.
+5. Khách ra tiệm làm, sau đó lên nền tảng đánh giá (Rating & Review).
+
+V. QUY MÔ THỊ TRƯỜNG (TAM/SAM/SOM)
+Nắm bắt xu hướng gen Z (18-35 tuổi) ở các thành phố lớn thích cá nhân hóa. Chiến lược phát triển bắt đầu từ B2C ở thành phố lớn, sau đó mở rộng B2B và thị trường toàn cầu.

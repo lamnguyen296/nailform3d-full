@@ -1,0 +1,104 @@
+.socialdetail-page {
+  background-image: url('/backgroundaboutus.png');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--primary-text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.detail-section {
+  padding: 20px 40px 60px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.large-image-box {
+  width: 100%;
+  height: 600px;
+  background: rgba(200,205,215,0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rotation-icon {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.rotation-icon:hover { transform: rotate(180deg); }
+
+.detail-content { display: flex; flex-direction: column; gap: 20px; }
+.info-block { display: flex; flex-direction: column; gap: 8px; }
+
+.detail-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.detail-text {
+  font-size: 20px;
+  color: var(--primary-text);
+  font-weight: 500;
+}
+
+.status-row {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-top: 10px;
+}
+
+.status-text { font-size: 20px; color: var(--primary-text); font-weight: 500; }
+.status-time { font-size: 16px; color: var(--primary-text); font-weight: 600; opacity: 0.8; }
+
+.interaction-block { display: flex; flex-direction: column; gap: 15px; margin-top: 10px; }
+.comment-input-wrapper { max-width: 250px; }
+
+.comment-input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  background: rgba(180,180,190,0.3);
+  color: #333;
+  font-size: 10px;
+  outline: none;
+}
+
+.btn-chat {
+  background: linear-gradient(90deg, #c58dfa, #4784fa);
+  color: #000;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(71,132,250,0.3);
+  transition: transform 0.2s, box-shadow 0.3s;
+  max-width: fit-content;
+}
+
+.btn-chat:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(71,132,250,0.4);
+}

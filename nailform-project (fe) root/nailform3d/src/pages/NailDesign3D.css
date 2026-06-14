@@ -1,0 +1,30 @@
+.naildesign3d-page {
+  background-image: url('/backgroundsignup.png');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--primary-text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.naildesign-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.naildesign-content h1 {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--primary-text);
+}

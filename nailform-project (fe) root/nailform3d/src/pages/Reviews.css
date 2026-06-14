@@ -1,0 +1,291 @@
+/* Reviews Section */
+.reviews-section {
+  padding: 0 40px 60px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.section-heading-wrapper {
+  margin-bottom: 20px;
+}
+
+.section-heading {
+  font-size: 24px;
+  font-weight: 800;
+  color: #111;
+}
+
+.reviews-container {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* Left Column */
+.reviews-left {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.quote-block {
+  display: flex;
+  gap: 20px;
+}
+
+.quote-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #dcdcdc;
+  flex-shrink: 0;
+}
+
+.quote-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+  padding-top: 10px;
+}
+
+.quote-icon {
+  font-size: 24px;
+  color: #111;
+  position: absolute;
+  top: -15px;
+  left: 0;
+}
+
+.quote-text {
+  font-size: 14px;
+  color: #333;
+  font-style: italic;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.quote-author {
+  font-size: 14px;
+  color: #111;
+  font-weight: 800;
+}
+
+.rating-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.overall-rating-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.overall-score {
+  font-size: 18px;
+  font-weight: 800;
+  color: #111;
+}
+
+.overall-score-out-of {
+  font-size: 12px;
+  color: #111;
+  font-weight: 600;
+}
+
+.bars-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-right: 20px;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.star-label {
+  width: 50px;
+  font-size: 14px;
+  color: #888;
+  font-weight: 500;
+}
+
+.star-label.active {
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+}
+
+.progress-bar {
+  flex-grow: 1;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar.active-bar {
+  height: 6px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}
+
+.progress-fill.solid-fill {
+  background: #222;
+}
+
+.left-empty-box {
+  width: 100%;
+  height: 200px;
+  background: rgba(230, 230, 230, 0.5);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Right Column */
+.reviews-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.review-filter-tabs {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.filter-tab {
+  font-size: 16px;
+  font-weight: 600;
+  color: #888;
+  cursor: pointer;
+  padding: 5px 20px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.filter-tab.active {
+  color: #111;
+  border-bottom: 2px solid #111;
+  margin-bottom: -2px;
+}
+
+.review-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-item {
+  display: flex;
+  gap: 20px;
+  padding: 25px 0;
+  border-bottom: 1px dashed rgba(130, 150, 255, 0.3);
+  border-left: 2px solid rgba(130, 150, 255, 0.3);
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.review-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #dcdcdc;
+  flex-shrink: 0;
+}
+
+.review-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.reviewer-name {
+  font-size: 16px;
+  font-weight: 800;
+  color: #111;
+}
+
+.review-stars {
+  color: #ff9800;
+  font-size: 10px;
+  display: flex;
+  gap: 2px;
+}
+
+.review-time {
+  font-size: 11px;
+  color: #111;
+  font-weight: 800;
+}
+
+.review-text {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #111;
+  font-weight: 500;
+}
+
+.review-actions {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #111;
+}
+
+.action-like {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.action-like i {
+  color: #ff4757;
+}
+
+.action-btn {
+  cursor: pointer;
+}
+
+.btn-checkout {
+  background: #fff;
+  color: #111;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 12px 40px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.3s;
+  align-self: flex-end;
+  margin-top: 20px;
+}
+
+.btn-checkout:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,17 @@
+.aboutus-page {
+  background-image: url('/backgroundaboutus.png');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--primary-text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.about-placeholder {
+  flex-grow: 1;
+}

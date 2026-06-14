@@ -1,0 +1,144 @@
+footer {
+  background-image: url('/footer.png') !important;
+  background-position: center top !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  border-top: none !important;
+  padding: 60px 80px;
+  position: relative;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: auto;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 350px;
+}
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  width: fit-content;
+}
+
+.footer-logo img {
+  max-height: 100%;
+  width: auto;
+}
+
+.footer-search {
+  position: relative;
+  width: 100%;
+}
+
+.footer-search input {
+  width: 100%;
+  padding: 12px 15px 12px 45px;
+  border-radius: 20px;
+  border: none;
+  background: rgba(255,255,255,0.85);
+  color: #333;
+  outline: none;
+  font-weight: 500;
+}
+
+.footer-search i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  font-size: 14px;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+}
+
+.footer-heading {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  letter-spacing: 0.5px;
+}
+
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-list li {
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #f0f0f0;
+}
+
+.contact-list i {
+  width: 15px;
+}
+
+.newsletter {
+  display: flex;
+  margin-top: 15px;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 250px;
+}
+
+.newsletter input {
+  padding: 12px 15px;
+  border: none;
+  background: white;
+  font-size: 13px;
+  outline: none;
+  color: #333;
+}
+
+.newsletter button {
+  background: #2a2a2a;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.3s;
+}
+
+.newsletter button:hover {
+  background: #000;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.social-icons a:hover {
+  opacity: 0.7;
+}

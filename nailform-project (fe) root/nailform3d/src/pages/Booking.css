@@ -1,0 +1,191 @@
+.booking-page {
+  background-image: url('/backgroundsocial.png');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--primary-text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.booking-hero {
+  padding: 20px 40px;
+  margin-top: 10px;
+  max-width: 800px;
+}
+
+.booking-hero h1 {
+  font-size: 46px;
+  font-weight: 800;
+  color: #4b1a1a;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+.booking-hero p {
+  font-size: 18px;
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.booking-filters {
+  padding: 0 40px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.booking-filters h2 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #111;
+}
+
+.filter-row {
+  display: flex;
+  gap: 20px;
+}
+
+.filter-btn {
+  background: #a985f9;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 4px 15px rgba(169,133,249,0.4);
+  transition: transform 0.2s, background 0.3s;
+}
+
+.filter-btn:hover { transform: translateY(-2px); background: #9b72f5; }
+
+.filter-input {
+  background: #a985f9;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  outline: none;
+  min-width: 180px;
+  box-shadow: 0 4px 15px rgba(169,133,249,0.4);
+}
+
+.filter-input::placeholder { color: rgba(255,255,255,0.9); }
+
+.booking-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 0 40px 60px 40px;
+}
+
+.salon-card {
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+  border: 1px solid rgba(255,255,255,0.6);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.salon-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.salon-details {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.salon-header { display: flex; flex-direction: column; gap: 4px; }
+.salon-title { font-size: 15px; font-weight: 800; color: #111; }
+.salon-rating { display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: 700; color: #111; }
+.stars { color: #ffb800; }
+.stars .fa-star.empty { color: #ccc; }
+
+.salon-info-box {
+  background: rgba(0,0,0,0.04);
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #222;
+}
+
+.info-item { display: flex; align-items: flex-start; gap: 8px; }
+.info-item i { margin-top: 2px; font-size: 11px; }
+
+.salon-actions { display: flex; gap: 8px; margin-top: 5px; }
+
+.btn-view {
+  flex: 1;
+  background: #b6a7f7;
+  color: #222;
+  border: none;
+  padding: 8px 0;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-view:hover { background: #a291f0; }
+
+.btn-book {
+  flex: 1;
+  background: #9f91f7;
+  color: white;
+  border: none;
+  padding: 8px 0;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-book:hover { background: #8777e8; }
+
+.pagination { display: flex; justify-content: center; align-items: center; gap: 15px; margin-top: 20px; margin-bottom: 20px; }
+.page-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(0,0,0,0.15); cursor: pointer; transition: background 0.3s, transform 0.3s; }
+.page-dot.active { background: #444; transform: scale(1.2); }
+.page-nav { background: none; border: none; font-size: 16px; color: #444; cursor: pointer; padding: 5px 10px; transition: color 0.3s; }
+.page-nav:hover { color: #000; }

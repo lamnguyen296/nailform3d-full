@@ -1,0 +1,166 @@
+.order-detail-page {
+  background-color: #f9fafb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+}
+
+.order-detail-container {
+  max-width: 800px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 0 20px;
+  flex: 1;
+}
+
+.breadcrumb {
+  margin-bottom: 20px;
+}
+
+.breadcrumb a {
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.breadcrumb a:hover {
+  color: #4f46e5;
+}
+
+.breadcrumb span {
+  color: #9ca3af;
+  margin: 0 8px;
+}
+
+.order-detail-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  padding: 40px;
+  border: 1px solid #e5e7eb;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f3f4f6;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.order-header h1 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 5px 0;
+}
+
+.order-header p {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 0;
+}
+
+.order-status-badge {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.order-status-badge.completed {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.order-status-badge.processing {
+  background: #fffbeb;
+  color: #d97706;
+}
+
+.order-section {
+  margin-bottom: 30px;
+}
+
+.order-section h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #374151;
+  margin-bottom: 15px;
+}
+
+.order-item-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px dashed #e5e7eb;
+}
+
+.order-item-row:last-child {
+  border-bottom: none;
+}
+
+.item-name {
+  font-weight: 600;
+  color: #111827;
+}
+
+.item-qty {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.item-price {
+  font-weight: 700;
+  color: #111827;
+}
+
+.order-summary {
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #4b5563;
+  font-size: 15px;
+}
+
+.summary-row.total {
+  font-size: 18px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 0;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.shipping-info {
+  background: #fdfcff;
+  border: 1px solid #e0e7ff;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.shipping-info p {
+  margin: 5px 0;
+  color: #4b5563;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.shipping-info p i {
+  color: #8b5cf6;
+  width: 20px;
+  text-align: center;
+}

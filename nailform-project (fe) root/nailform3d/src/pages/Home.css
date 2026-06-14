@@ -1,0 +1,272 @@
+/* ── Global shared CSS variables & ambient shapes ── */
+:root {
+  --primary-text: #170d74;
+  --secondary-text: #3c3b52;
+  --card-border: rgba(255,255,255,0.7);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+.ambient-shape-1 {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(230,240,255,0.7) 0%, rgba(255,255,255,0) 70%);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ambient-shape-2 {
+  position: absolute;
+  top: 20%;
+  right: -20%;
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(circle, rgba(220,210,245,0.6) 0%, rgba(255,255,255,0) 70%);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ── HOME PAGE ── */
+.home-page {
+  background-image: url('/backgroundhome.png');
+  background-position: center 24%;
+  background-repeat: no-repeat;
+  background-size: 110% auto;
+  background-attachment: fixed;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.hero {
+  display: flex;
+  padding: 60px 40px 100px 40px;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 650px;
+  padding-top: 40px;
+}
+
+.hero-title {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 25px;
+  color: var(--primary-text);
+}
+
+.hero-title .title-dark {
+  color: #261545;
+  display: block;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--primary-text);
+  margin-bottom: 40px;
+  font-weight: 500;
+  max-width: 500px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-book {
+  background: #9cbfee;
+  color: #1f3966;
+  border: none;
+  padding: 16px 35px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 8px 20px rgba(156,191,238,0.3);
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.btn-book:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(156,191,238,0.4);
+}
+
+.hero-image-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 55%;
+  height: 120%;
+  z-index: 5;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.hero-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: url('https://images.unsplash.com/photo-1519014816548-bf5fe059e98b?q=80&w=2000&auto=format&fit=crop') no-repeat center right;
+  background-size: cover;
+  mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 30%, rgba(0,0,0,0.1) 70%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 40%, rgba(0,0,0,0.1) 80%, transparent 100%);
+  opacity: 0.6;
+  mix-blend-mode: overlay;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px 40px 80px 40px;
+  position: relative;
+  z-index: 15;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  flex: 1;
+  max-width: 350px;
+  height: 220px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.1);
+}
+
+.card-bg-1 { position: absolute; inset: 0; background: url('/fthome1.png') center/cover no-repeat; z-index: 1; }
+.card-bg-2 { position: absolute; inset: 0; background: url('/fthome2.png') center/cover no-repeat; z-index: 1; }
+.card-bg-3 { position: absolute; inset: 0; background: url('/fthome3.png') center/cover no-repeat; z-index: 1; }
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(230,240,255,0.4) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.05) 100%);
+  z-index: 2;
+}
+
+.card-content {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-1-content { justify-content: flex-start; }
+.card-2-content { justify-content: flex-end; }
+.card-3-content { justify-content: flex-start; align-items: flex-end; text-align: right; }
+
+.feature-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--primary-text);
+  margin-bottom: 8px;
+}
+
+.feature-desc {
+  font-size: 13px;
+  color: var(--secondary-text);
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.cta-section {
+  text-align: center;
+  padding: 40px 20px 80px 20px;
+  position: relative;
+  z-index: 15;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.4) 100%);
+}
+
+.gradient-line {
+  height: 3px;
+  width: 60%;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, #b388ff 25%, #64b5f6 75%, rgba(255,255,255,0) 100%);
+  border-radius: 5px;
+}
+
+.cta-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--primary-text);
+  margin-bottom: 5px;
+}
+
+.cta-subtitle {
+  font-size: 16px;
+  color: var(--primary-text);
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.btn-cta {
+  background: linear-gradient(90deg, #518dec, #4471f0, #6c5bd6);
+  color: white;
+  border: none;
+  padding: 14px 40px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 8px 20px rgba(81,141,236,0.4);
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.btn-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(81,141,236,0.5);
+}

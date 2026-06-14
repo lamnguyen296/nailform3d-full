@@ -1,0 +1,12 @@
+package com.restapi.identityservice.repository;
+
+import com.restapi.identityservice.entity.SubscriptionPlanEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface SubscriptionPlanRepository extends JpaRepository<SubscriptionPlanEntity, String> {
+    List<SubscriptionPlanEntity> findByIsActiveTrue();
+}

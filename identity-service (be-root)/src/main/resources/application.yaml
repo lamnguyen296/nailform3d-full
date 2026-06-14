@@ -1,0 +1,33 @@
+server:
+  port: 8080
+  error:
+    include-message: always
+  servlet:
+    context-path: /identity
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/identity_service?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true}
+    username: ${SPRING_DATASOURCE_USERNAME:root}
+    password: ${SPRING_DATASOURCE_PASSWORD:root}
+  jpa:
+    hibernate:
+     ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+  mail:
+    host: smtp.gmail.com
+    port: 465
+    username: lamnbhe181873@fpt.edu.vn
+    password: ${SPRING_MAIL_PASSWORD:itmvfvkawnlyysvh}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          ssl:
+            enable: true
+
+gemini:
+  api:
+    key: ${GEMINI_API_KEY:AQ.Ab8RN6K6fYthI0g3kVTbc1ingJsklimVJhX__MxzGbME3XfB2A}

@@ -1,0 +1,267 @@
+/* Technicians Section */
+.technicians-section {
+  padding: 0 40px 60px 40px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.section-heading {
+  font-size: 20px;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 30px;
+}
+
+/* Subtle gray background strip behind technicians */
+.technicians-bg-wrap {
+  background: rgba(220, 220, 220, 0.4);
+  border-radius: 20px;
+  padding: 80px 40px 40px 40px;
+  position: relative;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Arrow navigation */
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.2s;
+}
+
+.nav-arrow:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.nav-arrow.left {
+  left: 10px;
+}
+
+.nav-arrow.right {
+  right: 10px;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  width: 100%;
+  margin-top: -110px;
+  margin-bottom: 30px;
+}
+
+/* Card container */
+.tech-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.tech-avatar-wrapper {
+  position: relative;
+  margin-bottom: 10px;
+  z-index: 2;
+}
+
+.tech-avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: #d6d6d6;
+  border: 4px solid transparent;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tech-badge {
+  position: absolute;
+  top: 20px;
+  right: -10px;
+  background: #b58ffd;
+  color: #111;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-pill {
+  background: #d0c4fb;
+  width: 100%;
+  padding: 15px 15px;
+  border-radius: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 15px;
+  z-index: 1;
+}
+
+.tech-name {
+  font-size: 16px;
+  font-weight: 800;
+  color: #111;
+}
+
+.tech-rating {
+  font-size: 13px;
+  font-weight: 700;
+  color: #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.tech-rating .stars-mini {
+  color: #ff9800;
+  font-size: 8px;
+  letter-spacing: -1px;
+}
+
+.tech-exp {
+  font-size: 10px;
+  color: #555;
+  font-weight: 500;
+}
+
+.skills-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 100%;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #111;
+}
+
+.skill-item i {
+  color: #ffb800;
+  font-size: 12px;
+}
+
+.skill-desc {
+  font-size: 10px;
+  line-height: 1.4;
+  color: #222;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+}
+
+.stats-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 10px;
+  font-weight: 700;
+  color: #333;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.stat-value {
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.heart-icon {
+  color: #ff4757;
+  font-size: 10px;
+}
+
+.check-icon {
+  color: #333;
+  font-size: 10px;
+}
+
+.btn-booking {
+  background: #b58ffd;
+  color: #111;
+  border: none;
+  width: 100%;
+  padding: 12px 10px;
+  border-radius: 20px;
+  font-weight: 800;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-align: center;
+}
+
+.btn-booking:hover {
+  background: #a47ff5;
+}
+
+.pagination-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.page-arrow {
+  font-size: 14px;
+  color: #444;
+  cursor: pointer;
+}
+
+.page-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #d0d0d0;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.page-dot.active {
+  background: #555;
+}
+
+.btn-view-all {
+  background: #af81ff;
+  color: #000;
+  border: none;
+  padding: 12px 40px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 30px;
+}
+
+.btn-view-all:hover {
+  background: #986def;
+}
