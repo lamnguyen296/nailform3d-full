@@ -20,7 +20,7 @@ spring:
     host: smtp.gmail.com
     port: 465
     username: lamnbhe181873@fpt.edu.vn
-    password: ${SPRING_MAIL_PASSWORD:itmvfvkawnlyysvh}
+    password: ${SPRING_MAIL_PASSWORD:your_email_password_here}
     properties:
       mail:
         smtp:
@@ -30,4 +30,4 @@ spring:
 
 gemini:
   api:
-    key: ${GEMINI_API_KEY:AQ.Ab8RN6K6fYthI0g3kVTbc1ingJsklimVJhX__MxzGbME3XfB2A}
+    key: ${GEMINI_API_KEY:your_gemini_api_key_here}
