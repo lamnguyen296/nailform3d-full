@@ -585,7 +585,7 @@ export default function NailConfigurator(){
 
   const handleApplyDesign=()=>{
     const token = localStorage.getItem('token');if (!token) {alert("Please log in to publish your design.");navigate('/login');return;}
-    if(userPlan==="FREE"){alert("Gói Free chỉ cho phép trải nghiệm. Vui lòng nâng cấp gói PRO hoặc PREMIUM để lưu thiết kế!");return;}
+
     const designData={skinColor,baseNailColor,placedCharms,drawnMarks,baseStyle,nailEffects};
     const canvas=document.querySelector('canvas');let thumbnailBase64=null;
     if(canvas){thumbnailBase64=canvas.toDataURL("image/jpeg",0.8);}
