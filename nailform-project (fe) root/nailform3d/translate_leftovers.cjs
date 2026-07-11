@@ -15,9 +15,9 @@ for (const file of files) {
   content = content.replace(/42\.000\.000đ/g, '42,000,000 VND');
   content = content.replace(/499\.000đ/g, '499,000 VND');
   content = content.replace(/299\.000đ/g, '299,000 VND');
-  content = content.replace(/1\.790\.000đ/g, '1,790,000 VND');
-  content = content.replace(/2\.990\.000đ/g, '2,990,000 VND');
-  content = content.replace(/4\.990\.000đ/g, '4,990,000 VND');
+  content = content.replace(/1\.999\.000đ/g, '1,999,000 VND');
+  content = content.replace(/2\.999\.000đ/g, '2,999,000 VND');
+  content = content.replace(/4\.999\.000đ/g, '4,999,000 VND');
   content = content.replace(/450\.000đ/g, '450,000 VND');
   content = content.replace(/120\.000đ/g, '120,000 VND');
   content = content.replace(/60\.000đ/g, '60,000 VND');

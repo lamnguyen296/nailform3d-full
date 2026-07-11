@@ -67,9 +67,9 @@ const STONES=["Jewelry Type 1.glb","Jewelry Type 2.glb","Jewelry Type 3.glb","Je
 const CHARMS=["Charm Type 1.glb","Charm Type 2.glb","Charm Type 3.glb","Charm Type 4.glb","Cross 1.glb","Cross 2.glb","Edge Cross.glb","Gloss FL.glb","Round GL.glb","Torus Gloss.glb","Umm.glb","Flower Accessory.glb"];
 function applyColorToScene(scene,hex){if(!scene)return;const color=new THREE.Color(hex);scene.traverse(node=>{if(node.isMesh&&node.material){const mats=Array.isArray(node.material)?node.material:[node.material];mats.forEach(m=>{if(m.color){m.color.set(color);m.needsUpdate=true;}});}});}
 
-function EdgeCrossCharm({charmData,isSelected,onSelect}){const{nodes}=useGLTF("/Edge Cross.glb");const meshNode=nodes["Thanh gia left"]||Object.values(nodes).find(n=>n.isMesh);const SF=1.5;return(<group position={charmData.position} rotation={[charmData.rotationX||0,charmData.rotationZ||0,0]} scale={charmData.scale||[SF,SF,SF]}><mesh geometry={meshNode.geometry} position={[0,0.05,0]} onPointerDown={e=>{e.stopPropagation();onSelect(charmData.id);}} onPointerOver={e=>{e.stopPropagation();document.body.style.cursor="pointer";}} onPointerOut={e=>{e.stopPropagation();document.body.style.cursor="auto";}}><meshStandardMaterial color={isSelected?"#ffaa00":"#d4af37"} metalness={isSelected?0.4:0.8} roughness={0.2} emissive={isSelected?"#ff3300":"#000000"} emissiveIntensity={isSelected?0.3:0}/></mesh></group>);}
+function EdgeCrossCharm({charmData,isSelected,onSelect}){const{nodes}=useGLTF("/Edge Cross.glb");const meshNode=nodes["Thanh gia left"]||Object.values(nodes).find(n=>n.isMesh);const SF=1.5;return(<group position={charmData.position}>{isSelected&&<mesh position={[0,0.01,0]} rotation={[-Math.PI/2,0,0]}><torusGeometry args={[0.15,0.015,16,32]}/><meshBasicMaterial color="#00ffff" transparent opacity={0.8} depthTest={false}/></mesh>}<group rotation={[charmData.rotationX||0,charmData.rotationZ||0,0]} scale={charmData.scale||[SF,SF,SF]}><mesh geometry={meshNode.geometry} position={[0,0.05,0]} onPointerDown={e=>{e.stopPropagation();onSelect(charmData.id);}} onPointerOver={e=>{e.stopPropagation();document.body.style.cursor="pointer";}} onPointerOut={e=>{e.stopPropagation();document.body.style.cursor="auto";}}><meshStandardMaterial color={charmData.color||"#d4af37"} metalness={0.8} roughness={0.2} /></mesh></group></group>);}
 
-function HeartCharm({charmData,isSelected,onSelect}){const{nodes}=useGLTF("/Heart.glb");const rawNode=nodes["Sphere.001"]||Object.values(nodes).find(n=>n.isMesh);const centeredGeo=useMemo(()=>{if(!rawNode?.geometry)return null;const geo=rawNode.geometry.clone();geo.center();geo.computeBoundingBox();geo.computeBoundingSphere();return geo;},[rawNode]);const SF=0.13;return(<group position={charmData.position} rotation={[charmData.rotationX||0,charmData.rotationZ||0,0]} scale={charmData.scale||[SF,SF,SF]}><mesh geometry={centeredGeo} position={[0,0.5,0]} onPointerDown={e=>{e.stopPropagation();onSelect(charmData.id);}} onPointerOver={e=>{e.stopPropagation();document.body.style.cursor="pointer";}} onPointerOut={e=>{e.stopPropagation();document.body.style.cursor="auto";}}><meshStandardMaterial color={isSelected?"#ff69b4":"#e91e8c"} metalness={isSelected?0.3:0.7} roughness={0.25} emissive={isSelected?"#ff3366":"#000000"} emissiveIntensity={isSelected?0.35:0}/></mesh></group>);}
+function HeartCharm({charmData,isSelected,onSelect}){const{nodes}=useGLTF("/Heart.glb");const rawNode=nodes["Sphere.001"]||Object.values(nodes).find(n=>n.isMesh);const centeredGeo=useMemo(()=>{if(!rawNode?.geometry)return null;const geo=rawNode.geometry.clone();geo.center();geo.computeBoundingBox();geo.computeBoundingSphere();return geo;},[rawNode]);const SF=0.13;return(<group position={charmData.position}>{isSelected&&<mesh position={[0,0.01,0]} rotation={[-Math.PI/2,0,0]}><torusGeometry args={[0.15,0.015,16,32]}/><meshBasicMaterial color="#00ffff" transparent opacity={0.8} depthTest={false}/></mesh>}<group rotation={[charmData.rotationX||0,charmData.rotationZ||0,0]} scale={charmData.scale||[SF,SF,SF]}><mesh geometry={centeredGeo} position={[0,0.5,0]} onPointerDown={e=>{e.stopPropagation();onSelect(charmData.id);}} onPointerOver={e=>{e.stopPropagation();document.body.style.cursor="pointer";}} onPointerOut={e=>{e.stopPropagation();document.body.style.cursor="auto";}}><meshStandardMaterial color={charmData.color||"#e91e8c"} metalness={0.7} roughness={0.25} /></mesh></group></group>);}
 
 function DynamicCharm({ charmData, isSelected, onSelect }) {
   const url = charmData.url || charmData.type;
@@ -93,21 +93,27 @@ function DynamicCharm({ charmData, isSelected, onSelect }) {
   if (!centeredGeo || !rawNode) return null;
   const isStone = url.includes("stone");
   return (
-    <group position={charmData.position} rotation={[charmData.rotationX || 0, charmData.rotationZ || 0, 0]} scale={charmData.scale || [SF, SF, SF]}>
-      <mesh 
-        geometry={centeredGeo} position={[0, 0.5, 0]} 
-        onPointerDown={onSelect ? e => { e.stopPropagation(); onSelect(charmData.id); } : undefined} 
-        onPointerOver={onSelect ? e => { e.stopPropagation(); document.body.style.cursor="pointer"; } : undefined} 
-        onPointerOut={onSelect ? e => { e.stopPropagation(); document.body.style.cursor="auto"; } : undefined}
-      >
-        <meshStandardMaterial 
-          color={isSelected ? "#ffaa00" : (isStone ? "#e2e8f0" : "#ffffff")} 
-          metalness={isSelected ? 0.4 : (isStone ? 0.9 : 0.1)} 
-          roughness={isSelected ? 0.2 : (isStone ? 0.1 : 0.6)} 
-          emissive={isSelected ? "#ff3300" : "#000000"} 
-          emissiveIntensity={isSelected ? 0.3 : 0}
-        />
-      </mesh>
+    <group position={charmData.position}>
+      {isSelected && (
+        <mesh position={[0, 0.01, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+          <torusGeometry args={[0.15, 0.015, 16, 32]} />
+          <meshBasicMaterial color="#00ffff" transparent opacity={0.8} depthTest={false} />
+        </mesh>
+      )}
+      <group rotation={[charmData.rotationX || 0, charmData.rotationZ || 0, 0]} scale={charmData.scale || [SF, SF, SF]}>
+        <mesh 
+          geometry={centeredGeo} position={[0, 0.5, 0]} 
+          onPointerDown={onSelect ? e => { e.stopPropagation(); onSelect(charmData.id); } : undefined} 
+          onPointerOver={onSelect ? e => { e.stopPropagation(); document.body.style.cursor="pointer"; } : undefined} 
+          onPointerOut={onSelect ? e => { e.stopPropagation(); document.body.style.cursor="auto"; } : undefined}
+        >
+          <meshStandardMaterial 
+            color={charmData.color || (isStone ? "#e2e8f0" : "#ffffff")} 
+            metalness={isStone ? 0.9 : 0.1} 
+            roughness={isStone ? 0.1 : 0.6} 
+          />
+        </mesh>
+      </group>
     </group>
   );
 }
@@ -490,9 +496,15 @@ function BottomPanel({
         })}
       </div>
       <div style={{ ...S.selectedCharmPanel, opacity: selectedCharmData ? 1 : 0.38 }}>
-        <div style={S.rotateRow}>
-          <span style={S.rotateLabel}>Rotation:</span>
-          <input type="range" min="0" max={Math.PI * 2} step="0.1" value={selectedCharmData ? selectedCharmData.rotationZ || 0 : 0} onChange={e => { if (!selectedCharmData) return; const val = parseFloat(e.target.value); setPlacedCharms(p => p.map(c => c.id === selectedCharmData.id ? { ...c, rotationZ: val } : c)); }} disabled={!selectedCharmData} style={S.slider} />
+        <div style={{ display: 'flex', flexDirection: 'row', gap: 20, alignItems: 'center' }}>
+          <div style={{ display: 'flex', flexDirection: 'row', gap: 8, alignItems: 'center' }}>
+            <span style={S.rotateLabel}>Color:</span>
+            <input type="color" value={selectedCharmData?.color || (selectedCharmData?.type === "edgecross" ? "#d4af37" : (selectedCharmData?.type === "heart" ? "#e91e8c" : (selectedCharmData?.type?.includes("stone") ? "#e2e8f0" : "#ffffff")))} onChange={e => { if (!selectedCharmData) return; const val = e.target.value; setPlacedCharms(p => p.map(c => c.id === selectedCharmData.id ? { ...c, color: val } : c)); }} disabled={!selectedCharmData} style={{border:'none', width: 28, height: 28, cursor: selectedCharmData ? 'pointer' : 'default', background:'transparent', padding: 0}} />
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'row', gap: 8, alignItems: 'center', flex: 1 }}>
+            <span style={S.rotateLabel}>Rotation:</span>
+            <input type="range" min="0" max={Math.PI * 2} step="0.1" value={selectedCharmData ? selectedCharmData.rotationZ || 0 : 0} onChange={e => { if (!selectedCharmData) return; const val = parseFloat(e.target.value); setPlacedCharms(p => p.map(c => c.id === selectedCharmData.id ? { ...c, rotationZ: val } : c)); }} disabled={!selectedCharmData} style={{...S.slider, flex: 1}} />
+          </div>
         </div>
         <div style={S.charmActionRow}>
           <button style={{ ...S.deleteBtn, opacity: selectedCharmData ? 1 : 0.38, cursor: selectedCharmData ? "pointer" : "default" }} disabled={!selectedCharmData} onClick={() => { if (!selectedCharmData) return; setPlacedCharms(p => p.filter(c => c.id !== selectedCharmData.id)); setSelectedCharmId(null); }}>🗑 Xoá cái này</button>
@@ -517,9 +529,15 @@ function BottomPanel({
         })}
       </div>
       <div style={{ ...S.selectedCharmPanel, opacity: selectedCharmData ? 1 : 0.38 }}>
-        <div style={S.rotateRow}>
-          <span style={S.rotateLabel}>Rotation:</span>
-          <input type="range" min="0" max={Math.PI * 2} step="0.1" value={selectedCharmData ? selectedCharmData.rotationZ || 0 : 0} onChange={e => { if (!selectedCharmData) return; const val = parseFloat(e.target.value); setPlacedCharms(p => p.map(c => c.id === selectedCharmData.id ? { ...c, rotationZ: val } : c)); }} disabled={!selectedCharmData} style={S.slider} />
+        <div style={{ display: 'flex', flexDirection: 'row', gap: 20, alignItems: 'center' }}>
+          <div style={{ display: 'flex', flexDirection: 'row', gap: 8, alignItems: 'center' }}>
+            <span style={S.rotateLabel}>Color:</span>
+            <input type="color" value={selectedCharmData?.color || (selectedCharmData?.type === "edgecross" ? "#d4af37" : (selectedCharmData?.type === "heart" ? "#e91e8c" : (selectedCharmData?.type?.includes("stone") ? "#e2e8f0" : "#ffffff")))} onChange={e => { if (!selectedCharmData) return; const val = e.target.value; setPlacedCharms(p => p.map(c => c.id === selectedCharmData.id ? { ...c, color: val } : c)); }} disabled={!selectedCharmData} style={{border:'none', width: 28, height: 28, cursor: selectedCharmData ? 'pointer' : 'default', background:'transparent', padding: 0}} />
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'row', gap: 8, alignItems: 'center', flex: 1 }}>
+            <span style={S.rotateLabel}>Rotation:</span>
+            <input type="range" min="0" max={Math.PI * 2} step="0.1" value={selectedCharmData ? selectedCharmData.rotationZ || 0 : 0} onChange={e => { if (!selectedCharmData) return; const val = parseFloat(e.target.value); setPlacedCharms(p => p.map(c => c.id === selectedCharmData.id ? { ...c, rotationZ: val } : c)); }} disabled={!selectedCharmData} style={{...S.slider, flex: 1}} />
+          </div>
         </div>
         <div style={S.charmActionRow}>
           <button style={{ ...S.deleteBtn, opacity: selectedCharmData ? 1 : 0.38, cursor: selectedCharmData ? "pointer" : "default" }} disabled={!selectedCharmData} onClick={() => { if (!selectedCharmData) return; setPlacedCharms(p => p.filter(c => c.id !== selectedCharmData.id)); setSelectedCharmId(null); }}>🗑 Xoá cái này</button>
@@ -544,9 +562,15 @@ function BottomPanel({
         })}
       </div>
       <div style={{ ...S.selectedCharmPanel, opacity: selectedCharmData ? 1 : 0.38 }}>
-        <div style={S.rotateRow}>
-          <span style={S.rotateLabel}>Rotation:</span>
-          <input type="range" min="0" max={Math.PI * 2} step="0.1" value={selectedCharmData ? selectedCharmData.rotationZ || 0 : 0} onChange={e => { if (!selectedCharmData) return; const val = parseFloat(e.target.value); setPlacedCharms(p => p.map(c => c.id === selectedCharmData.id ? { ...c, rotationZ: val } : c)); }} disabled={!selectedCharmData} style={S.slider} />
+        <div style={{ display: 'flex', flexDirection: 'row', gap: 10, alignItems: 'center' }}>
+          <div style={{ ...S.rotateRow, flex: 1 }}>
+            <span style={S.rotateLabel}>Rotation:</span>
+            <input type="range" min="0" max={Math.PI * 2} step="0.1" value={selectedCharmData ? selectedCharmData.rotationZ || 0 : 0} onChange={e => { if (!selectedCharmData) return; const val = parseFloat(e.target.value); setPlacedCharms(p => p.map(c => c.id === selectedCharmData.id ? { ...c, rotationZ: val } : c)); }} disabled={!selectedCharmData} style={S.slider} />
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 5, alignItems: 'center' }}>
+            <span style={S.rotateLabel}>Color:</span>
+            <input type="color" value={selectedCharmData?.color || (selectedCharmData?.type === "edgecross" ? "#d4af37" : (selectedCharmData?.type === "heart" ? "#e91e8c" : (selectedCharmData?.type?.includes("stone") ? "#e2e8f0" : "#ffffff")))} onChange={e => { if (!selectedCharmData) return; const val = e.target.value; setPlacedCharms(p => p.map(c => c.id === selectedCharmData.id ? { ...c, color: val } : c)); }} disabled={!selectedCharmData} style={{border:'none', width: 24, height: 24, cursor: selectedCharmData ? 'pointer' : 'default', background:'transparent', padding: 0}} />
+          </div>
         </div>
         <div style={S.charmActionRow}>
           <button style={{ ...S.deleteBtn, opacity: selectedCharmData ? 1 : 0.38, cursor: selectedCharmData ? "pointer" : "default" }} disabled={!selectedCharmData} onClick={() => { if (!selectedCharmData) return; setPlacedCharms(p => p.filter(c => c.id !== selectedCharmData.id)); setSelectedCharmId(null); }}>🗑 Xoá cái này</button>

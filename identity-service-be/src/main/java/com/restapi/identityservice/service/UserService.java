@@ -117,9 +117,9 @@ public class UserService {
             switch (plan) {
                 case "PRO": totalRevenue += 299000; break;
                 case "PREMIUM": totalRevenue += 499000; break;
-                case "STUDIO_5": totalRevenue += 1790000; break;
-                case "STUDIO_10": totalRevenue += 2990000; break;
-                case "ACADEMY_20": totalRevenue += 4990000; break;
+                case "STUDIO_5": totalRevenue += 1999000; break;
+                case "STUDIO_10": totalRevenue += 2999000; break;
+                case "ACADEMY_20": totalRevenue += 4999000; break;
                 default: break;
             }
         }

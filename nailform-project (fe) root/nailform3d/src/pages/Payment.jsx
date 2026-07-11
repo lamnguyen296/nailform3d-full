@@ -8,9 +8,9 @@ import './Payment.css';
 const PLAN_DETAILS = {
   'PRO': { price: '299,000 VND', name: 'PRO Plan', desc: 'Professional personal experience' },
   'PREMIUM': { price: '499,000 VND', name: 'PREMIUM Plan', desc: 'Unlimited 3D designs' },
-  'STUDIO_5': { price: '1,790,000 VND', name: 'Studio Plan (5 Users)', desc: 'Solution for small studios' },
-  'STUDIO_10': { price: '2,990,000 VND', name: 'Studio Plan (10 Users)', desc: 'Performance and team management' },
-  'ACADEMY_20': { price: '4,990,000 VND', name: 'Academy Plan (20 Users)', desc: 'Ultimate teaching solution' }
+  'STUDIO_5': { price: '1,999,000 VND', name: 'Studio Plan (5 Users)', desc: 'Solution for small studios' },
+  'STUDIO_10': { price: '2,999,000 VND', name: 'Studio Plan (10 Users)', desc: 'Performance and team management' },
+  'ACADEMY_20': { price: '4,999,000 VND', name: 'Academy Plan (20 Users)', desc: 'Ultimate teaching solution' }
 };
 
 export default function Payment() {

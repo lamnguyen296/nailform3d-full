@@ -37,6 +37,12 @@ import UserProfile from './pages/UserProfile';
 
 import OrderDetail from './pages/OrderDetail';
 
+// Job Board Pages
+import Jobs from './pages/Jobs';
+import JobDetail from './pages/JobDetail';
+import SalonJobs from './pages/SalonJobs';
+import MyApplications from './pages/MyApplications';
+
 // 3D Configurator (original App content)
 import NailConfigurator from './NailConfigurator';
 import ChatWidget from './components/ChatWidget';
@@ -97,6 +103,12 @@ export default function App() {
       <Route path="/admin/subscriptions" element={<AdminDashboard />} />
       <Route path="/admin/dashboard"     element={<AdminDashboard />} />
       <Route path="/3d-configurator"     element={<NailConfigurator />} />
+      
+      {/* Job Board Routes */}
+      <Route path="/jobs"                element={<Jobs />} />
+      <Route path="/jobs/:id"            element={<JobDetail />} />
+      <Route path="/salon-jobs"          element={<SalonJobs />} />
+      <Route path="/my-applications"     element={<MyApplications />} />
       </Routes>
       <ChatWidget />
     </>

@@ -28,10 +28,12 @@ export default function Navbar() {
           <Link to="/booking" className={isActive('/booking')}>Bookings</Link>
           <Link to="/gallery" className={isActive('/gallery')}>Gallery</Link>
           <Link to="/social" className={isActive('/social')}>Social</Link>
+          <Link to="/jobs" className={isActive('/jobs')} style={{color: '#ec4899', fontWeight: 'bold'}}>Jobs</Link>
             {user && (user.role === 'SALON' || user.role === 'ROLE_SALON') ? (
               <>
                 <Link to="/my-offers" className={isActive('/my-offers')}>My Offers</Link>
                 <Link to="/salon-appointments" className={isActive('/salon-appointments')}>Appointments</Link>
+                <Link to="/salon-jobs" className={isActive('/salon-jobs')}>Job Dashboard</Link>
                 {user.plan && (user.plan.startsWith('STUDIO') || user.plan.startsWith('ACADEMY')) && (
                   <Link to="/salon-members" className={isActive('/salon-members')}>Manage Members</Link>
                 )}
@@ -42,6 +44,7 @@ export default function Navbar() {
               <>
                 <Link to="/my-requests" className={isActive('/my-requests')}>My Requests</Link>
                 <Link to="/user-appointments" className={isActive('/user-appointments')}>Appointments</Link>
+                <Link to="/my-applications" className={isActive('/my-applications')}>My Applications</Link>
               </>
             ) : null}
             <Link to="/pricing" className={isActive('/pricing')} style={{color: '#a78bfa', fontWeight: 'bold', marginLeft: '10px'}}>Pricing</Link>

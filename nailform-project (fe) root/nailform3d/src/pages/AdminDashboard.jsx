@@ -632,7 +632,7 @@ export default function AdminDashboard() {
 
                           <div className="admin-plan-bar-item">
                             <div className="admin-plan-bar-info">
-                              <span>B2B Studio (5 users - 1.79M)</span>
+                              <span>B2B Studio (5 users - 1.999M)</span>
                               <span>{getPercent(plans['STUDIO_5'] || 0)}% ({plans['STUDIO_5'] || 0} users)</span>
                             </div>
                             <div className="admin-plan-bar-bg">
@@ -642,7 +642,7 @@ export default function AdminDashboard() {
 
                           <div className="admin-plan-bar-item">
                             <div className="admin-plan-bar-info">
-                              <span>B2B Studio (10 users - 2.99M)</span>
+                              <span>B2B Studio (10 users - 2.999M)</span>
                               <span>{getPercent(plans['STUDIO_10'] || 0)}% ({plans['STUDIO_10'] || 0} users)</span>
                             </div>
                             <div className="admin-plan-bar-bg">
@@ -652,7 +652,7 @@ export default function AdminDashboard() {
 
                           <div className="admin-plan-bar-item">
                             <div className="admin-plan-bar-info">
-                              <span>B2B Academy (20 users - 4.99M)</span>
+                              <span>B2B Academy (20 users - 4.999M)</span>
                               <span>{getPercent(plans['ACADEMY_20'] || 0)}% ({plans['ACADEMY_20'] || 0} users)</span>
                             </div>
                             <div className="admin-plan-bar-bg">
@@ -735,9 +735,9 @@ export default function AdminDashboard() {
                                   plan: req.requestedPlan,
                                   amount: req.requestedPlan === 'B2C_PREMIUM' ? '499,000 VND' : 
                                           req.requestedPlan === 'B2C_PRO' ? '299,000 VND' :
-                                          req.requestedPlan === 'B2B_STUDIO_5' ? '1,790,000 VND' :
-                                          req.requestedPlan === 'B2B_STUDIO_10' ? '2,990,000 VND' :
-                                          req.requestedPlan === 'B2B_ACADEMY_20' ? '4,990,000 VND' : 'N/A'
+                                          req.requestedPlan === 'B2B_STUDIO_5' ? '1,999,000 VND' :
+                                          req.requestedPlan === 'B2B_STUDIO_10' ? '2,999,000 VND' :
+                                          req.requestedPlan === 'B2B_ACADEMY_20' ? '4,999,000 VND' : 'N/A'
                                 })}
                                 style={{ background: '#f1f5f9', border: '1px solid var(--admin-border)', padding: '6px 12px', borderRadius: '8px', cursor: 'pointer', fontSize: '12px', fontWeight: 'bold', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
                               >
