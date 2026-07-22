@@ -1,6 +1,6 @@
 package com.restapi.identityservice.service;
 
-import com.restapi.identityservice.dto.JobApplicationRequest;
+import com.restapi.identityservice.dto.request.JobApplicationRequest;
 import com.restapi.identityservice.entity.JobApplication;
 import com.restapi.identityservice.entity.User;
 import com.restapi.identityservice.repository.JobApplicationRepository;

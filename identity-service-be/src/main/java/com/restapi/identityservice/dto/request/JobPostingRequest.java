@@ -1,4 +1,4 @@
-package com.restapi.identityservice.dto;
+package com.restapi.identityservice.dto.request;
 
 public class JobPostingRequest {
     private String title;

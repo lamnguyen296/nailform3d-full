@@ -1,6 +1,6 @@
 package com.restapi.identityservice.controller;
 
-import com.restapi.identityservice.dto.JobPostingRequest;
+import com.restapi.identityservice.dto.request.JobPostingRequest;
 import com.restapi.identityservice.entity.JobPosting;
 import com.restapi.identityservice.service.JobPostingService;
 import org.springframework.beans.factory.annotation.Autowired;
