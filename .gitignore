@@ -3,3 +3,4 @@ fake_data_100_users.sql
 generate_sql.js
 refactor.js
 update_db.js
+.idea/
