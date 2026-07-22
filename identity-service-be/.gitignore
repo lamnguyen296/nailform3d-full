@@ -35,3 +35,7 @@ build/
 # Custom Scripts
 fix_encoding.cjs
 list_models.cjs
+
+# Environment variables
+.env
+*.env
